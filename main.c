@@ -5,15 +5,16 @@
 int main(int argc, char const *argv[]) {
 
 	FILE * csv_file;
+	FILE * input;
 	csv_file = fopen(argv[1],"r");
-	//input = fopen(argv[2],"r");
+	input = fopen(argv[2],"r");
 
-
+	int comparison_count = 0;
+	int * ptr_to_comparison_count = &comparison_count;
 	char temp_string[BUFFER_SIZE];
 	bt_node_t* tree = bst_make_tree();
 	olympian_t *temp_olymp;
 
-	char* name = "olympian name";
 
 	while(fgets(temp_string,BUFFER_SIZE,csv_file) != NULL){
 		temp_olymp = create__entry(temp_string);
@@ -21,7 +22,12 @@ int main(int argc, char const *argv[]) {
 	}
 	fclose(csv_file);
 
-	search(tree,name);
+	while(fgets(temp_string,BUFFER_SIZE,input) != NULL)
+	{
+		comparison_count = 0;
+		search(tree,temp_string,ptr_to_comparison_count);
+	}
+
 
 
 

@@ -34,27 +34,26 @@ bt_node_t* bst_insert(bt_node_t *root, olympian_t* key){
 }
 
 /* search the tree for a value, continue searching until leaf node is reached */
-bt_node_t* search(bt_node_t *root, string_t value){
+bt_node_t* search(bt_node_t *root, string_t value, int* comparison_count){
 
+	*comparison_count++;
 	if(root == NULL){
+		printf("%s --> %d\n",value,*comparison_count);
 		return NULL;
 	}
 
 	if(strcmp(root->key, value) == 0){
-		printf("FOUND\n");
+		printf("%s --> %d\n",value,*comparison_count);
 		return root;
 	}
 	else{
 		if(strcmp(root->key, value) < 0){
-			printf("LEFT\n");
-			return search(root->left,value);
+			return search(root->left,value,comparison_count);
 		}
 		else {
-			printf("RIGHT\n");
-			return search(root->right,value);
+			return search(root->right,value,comparison_count);
 		}
 	}
-	//printf("NOTFOUND\n");
 }
 
 
