@@ -10,7 +10,6 @@ int main(int argc, char const *argv[]) {
 	input = fopen(argv[2],"r");
 
 	int comparison_count = 0;
-	int * ptr_to_comparison_count = &comparison_count;
 	char temp_string[BUFFER_SIZE];
 	bt_node_t* tree = bst_make_tree();
 	olympian_t *temp_olymp;
@@ -22,11 +21,10 @@ int main(int argc, char const *argv[]) {
 	}
 	fclose(csv_file);
 
-	//printf("%s\n",tree->key);
 	while(fgets(temp_string,BUFFER_SIZE,input) != NULL)
 	{
 		comparison_count = 0;
-		search(tree,temp_string,ptr_to_comparison_count);
+		search(tree,temp_string,&comparison_count);
 	}
 
 

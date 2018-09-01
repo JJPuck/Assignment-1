@@ -39,21 +39,19 @@ void read_csv_into_olympian_struct(olympian_t *target, char* temp_string){
 }
 
 void print_olympian(olympian_t *target){
-	printf("%d,%s,%c,%d,%d,%d,%s,%s,%s,%d,%s,%s,%s,%s,%s",
-	target->id,        /* INT */
-	target->name,      /* STRING */
-	target->sex,       /* CHAR */
-	target->age,       /* INT */
-	target->height,    /* INT */
-	target->weight,    /* INT */
-	target->team_name, /* STRING */
-	target->NOC,       /* STRING */
-	target->games,     /* STRING */
-	target->year,      /* INT */
-	target->season,    /* STRING */
-	target->city,      /* STRING */
-	target->sport,     /* STRING */
-	target->event,     /* STRING */
-	target->medal      /* STRING */
-	);
+	printf("ID: %d ",target->id);
+	printf("Sex: %c || ",target->sex);
+	printf("Age: %d || ",target->age);
+	printf("Height: %d || ",target->height);
+	printf("Weight: %d || ",target->weight);
+	printf("Team: %s || ",target->team_name);
+	printf("NOC: %s || ",target->NOC);
+	printf("Games: %s || ",target->games);
+	printf("Year: %d || ",target->year);
+	printf("Season: %s || ",target->season);
+	printf("City: %s || ",target->city);
+	printf("Sport: %s || ",target->sport);
+	printf("Event: %s || ",target->event);
+	printf("Medal: %s || \n\n",target->medal);
+
 }
