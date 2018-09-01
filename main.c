@@ -22,6 +22,7 @@ int main(int argc, char const *argv[]) {
 	}
 	fclose(csv_file);
 
+	//printf("%s\n",tree->key);
 	while(fgets(temp_string,BUFFER_SIZE,input) != NULL)
 	{
 		comparison_count = 0;
