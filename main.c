@@ -21,7 +21,7 @@ int main(int argc, char const *argv[]) {
 	}
 	fclose(csv_file);
 
-	//search(tree,name);
+	search(tree,name);
 
 
 

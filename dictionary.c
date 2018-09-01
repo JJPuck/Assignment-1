@@ -36,6 +36,10 @@ bt_node_t* bst_insert(bt_node_t *root, olympian_t* key){
 /* search the tree for a value, continue searching until leaf node is reached */
 bt_node_t* search(bt_node_t *root, string_t value){
 
+	if(root == NULL){
+		return NULL;
+	}
+
 	if(strcmp(root->key, value) == 0){
 		printf("FOUND\n");
 		return root;
