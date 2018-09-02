@@ -1,3 +1,7 @@
+all: dict1 dict2
+
+dict1: csv_functions.o dictionary.o main.c
+	gcc -g -Wall -o dict2 main.c csv_functions.o dictionary.o
 
 dict2: csv_functions.o dictionary.o main2.c
 	gcc -g -Wall -o dict2 main2.c csv_functions.o dictionary.o

@@ -1,4 +1,5 @@
 #include "csv_functions.h"
+#include "dictionary.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -11,6 +12,7 @@ int main(int argc, char const *argv[]) {
 
 
 	int comparison_count = 0;
+	int total_comparisons = 0;
 	char temp_string[BUFFER_SIZE];
 	bt_node_t* tree = bst_make_tree();
 	olympian_t *temp_olymp;
@@ -27,10 +29,11 @@ int main(int argc, char const *argv[]) {
 		temp_string[strlen(temp_string)-1] = '\0';
 		comparison_count = 0;
 		search_bst_lldup(tree,temp_string,&comparison_count,output);
+		total_comparisons = total_comparisons + comparison_count;
 	}
 
 
-
+printf("%d Total Comparisons: \n",total_comparisons);
 
 /* TO DO
 * Write the output format print function
