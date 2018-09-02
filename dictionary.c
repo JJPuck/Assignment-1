@@ -74,21 +74,40 @@ bt_node_t* insert_equal_key(bt_node_t *root, olympian_t* key){
 	}
 	else if (strcmp(root->key,key->name) == 0){
 		/*Create a linked list pointing to the next node */
-		if(root->next == NULL){
-			root = malloc(sizeof(bt_node_t));
-			strcpy(root->key,key->name);
-			root->data = key;
-			return root;
-		}
-		else return bst_insert(root->next, key);
+		root->next = insert_equal_key(root->next, key);
 	}
 	else if (strcmp(root->key, key->name) <0){
-		root->left = bst_insert(root->left, key);
+		root->left = insert_equal_key(root->left, key);
 	}
 	else if (strcmp(root->key, key->name) > 0){
-		root->right = bst_insert(root->right, key);
+		root->right = insert_equal_key(root->right, key);
 	}
 	return root;
+}
+
+/* Search for a key in bst with linked list for duplicates */
+bt_node_t* search_bst_lldup(bt_node_t *root, string_t value, int* comparison_count, FILE* output){
+	if(root == NULL){
+		fprintf(output,"%s --> NOTFOUND\n\n",value);
+		printf("%s --> %d\n",value,*comparison_count);
+		return NULL;
+	}
+	else if(strcmp(root->key,value) == 0){
+		print_olympian(root->data,output);
+		printf("%s --> %d\n",value,*comparison_count);
+		if(root->next != NULL){
+			return search_bst_lldup(root->next,value,comparison_count,output);
+		}
+		else return root;
+	}
+	else if(strcmp(root->key, value) < 0){
+		(*comparison_count)++;
+		return search_bst_lldup(root->left,value,comparison_count,output);
+		}
+	else {
+		(*comparison_count)++;
+		return search_bst_lldup(root->right,value,comparison_count,output);
+	}
 }
 /*  traverse through the binary search tree*/
 bt_node_t* traverse(bt_node_t *root){

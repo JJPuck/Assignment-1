@@ -56,5 +56,7 @@ bt_node_t* insert_equal_key(bt_node_t *root, olympian_t* key);
 bt_node_t* traverse(bt_node_t *root);
 /* Search the tree for a given key and count the number of comparisons */
 bt_node_t* search(bt_node_t* root, string_t value,int* comparison_count, FILE* output);
+/* Search for a key in bst with linked list for duplicates */
+bt_node_t* search_bst_lldup(bt_node_t *root, string_t value, int* comparison_count, FILE* output);
 
 #endif

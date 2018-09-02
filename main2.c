@@ -22,12 +22,12 @@ int main(int argc, char const *argv[]) {
 	}
 	fclose(csv_file);
 
-	/*while(fgets(temp_string,BUFFER_SIZE,stdin) != NULL)
+	while(fgets(temp_string,BUFFER_SIZE,stdin) != NULL)
 	{
 		temp_string[strlen(temp_string)-1] = '\0';
 		comparison_count = 0;
-		search(tree,temp_string,&comparison_count,output);
-	}*/
+		search_bst_lldup(tree,temp_string,&comparison_count,output);
+	}
 
 
 
