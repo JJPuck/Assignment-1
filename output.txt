@@ -1,0 +1,34 @@
+Tomasz Ireneusz ya --> ID: 135571 Sex: M || Age: 30 || Height: 185 || Weight: 96 || Team: Poland || NOC: POL || Games: 1998 Winter || Year: 1998 || Season: Winter || City: Nagano || Sport: Bobsleigh || Event: Bobsleigh Men's Four || Medal: NA
+ || 
+
+A Dijiang --> ID: 1 Sex: M || Age: 24 || Height: 180 || Weight: 80 || Team: China || NOC: CHN || Games: 1992 Summer || Year: 1992 || Season: Summer || City: Barcelona || Sport: Basketball || Event: Basketball Men's Basketball || Medal: NA
+ || 
+
+Cornelia Aalten --> NOTFOUND
+Christine Jacoba Aaftink --> ID: 5 Sex: F || Age: 21 || Height: 185 || Weight: 82 || Team: Netherlands || NOC: NED || Games: 1988 Winter || Year: 1988 || Season: Winter || City: Calgary || Sport: Speed Skating || Event: Speed Skating Women's 500 metres || Medal: NA
+ || 
+
+Kjetil Andr Aamodt --> ID: 20 Sex: M || Age: 20 || Height: 176 || Weight: 85 || Team: Norway || NOC: NOR || Games: 1992 Winter || Year: 1992 || Season: Winter || City: Albertville || Sport: Alpine Skiing || Event: Alpine Skiing Men's Downhill || Medal: NA
+ || 
+
+Nils Egil Aaness --> ID: 24 Sex: M || Age: 24 || Height: 0 || Weight: 0 || Team:  || NOC:  || Games:  || Year: 0 || Season:  || City:  || Sport:  || Event:  || Medal:  || 
+
+Misty Dawn Marie Hyman --> ID: 51444 Sex: F || Age: 21 || Height: 170 || Weight: 65 || Team: United States || NOC: USA || Games: 2000 Summer || Year: 2000 || Season: Summer || City: Sydney || Sport: Swimming || Event: Swimming Women's 200 metres Butterfly || Medal: Gold
+ || 
+
+Anne-Mari Hyrylinen (Koskinen-) --> ID: 51459 Sex: F || Age: 37 || Height: 168 || Weight: 50 || Team: Finland || NOC: FIN || Games: 2016 Summer || Year: 2016 || Season: Summer || City: Rio de Janeiro || Sport: Athletics || Event: Athletics Women's Marathon || Medal: NA
+ || 
+
+Khristos Iakovou --> ID: 51485 Sex: M || Age: 20 || Height: 172 || Weight: 92 || Team: Greece || NOC: GRE || Games: 1968 Summer || Year: 1968 || Season: Summer || City: Mexico City || Sport: Weightlifting || Event: Weightlifting Men's Middleweight || Medal: NA
+ || 
+
+Jos Ibaez Gmez --> ID: 51505 Sex: M || Age: 20 || Height: 184 || Weight: 93 || Team: Cuba || NOC: CUB || Games: 1972 Summer || Year: 1972 || Season: Summer || City: Munich || Sport: Judo || Event: Judo Men's Half-Heavyweight || Medal: NA
+ || 
+
+Sigrid Christina Lindblom-Scherling --> ID: 70096 Sex: F || Age: 19 || Height: 159 || Weight: 62 || Team: Sweden || NOC: SWE || Games: 1960 Winter || Year: 1960 || Season: Winter || City: Squaw Valley || Sport: Speed Skating || Event: Speed Skating Women's 500 metres || Medal: NA
+ || 
+
+Cathy Jean Marino-Geers (-Bradford) --> ID: 75096 Sex: F || Age: 31 || Height: 170 || Weight: 69 || Team: United States || NOC: USA || Games: 1988 Summer || Year: 1988 || Season: Summer || City: Seoul || Sport: Canoeing || Event: Canoeing Women's Kayak Doubles 500 metres || Medal: NA
+ || 
+
+NON ATHLETE --> NOTFOUND

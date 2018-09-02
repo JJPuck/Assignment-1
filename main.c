@@ -6,8 +6,11 @@ int main(int argc, char const *argv[]) {
 
 	FILE * csv_file;
 	FILE * input;
+	FILE * output;
 	csv_file = fopen(argv[1],"r");
-	input = fopen(argv[2],"r");
+	input = fopen(argv[3],"r");
+	output = fopen(argv[2],"w");
+
 
 	int comparison_count = 0;
 	char temp_string[BUFFER_SIZE];
@@ -21,10 +24,11 @@ int main(int argc, char const *argv[]) {
 	}
 	fclose(csv_file);
 
-	while(fgets(temp_string,BUFFER_SIZE,input) != NULL)
+	while(fgets(temp_string,BUFFER_SIZE,stdin) != NULL)
 	{
+		temp_string[strlen(temp_string)-1] = '\0';
 		comparison_count = 0;
-		search(tree,temp_string,&comparison_count);
+		search(tree,temp_string,&comparison_count,output);
 	}
 
 

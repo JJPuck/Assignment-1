@@ -6,6 +6,7 @@
 *
 */
 #include "dictionary.h"
+#include "csv_functions.h"
 
 
 /* Create an empty instance of a tree */
@@ -34,23 +35,27 @@ bt_node_t* bst_insert(bt_node_t *root, olympian_t* key){
 }
 
 /* search the tree for a value, continue searching until leaf node is reached */
-bt_node_t* search(bt_node_t *root, string_t value, int* comparison_count){
-
+bt_node_t* search(bt_node_t *root, string_t value, int* comparison_count, FILE* output){
 	(*comparison_count)++;
-	if(root == NULL || strcmp(root->key, value) == 0){
+	if(root == NULL){
+		fprintf(output,"%s --> NOTFOUND\n",value);
+		printf("%s --> %d\n",value,*comparison_count);
+		return NULL;
+	}
+	else if(strcmp(root->key,value) == 0){
+		print_olympian(root->data,output);
 		printf("%s --> %d\n",value,*comparison_count);
 		return root;
 	}
-	else{
-
-		if(strcmp(root->key, value) < 0){
-			return search(root->left,value,comparison_count);
+	else if(strcmp(root->key, value) < 0){
+		return search(root->left,value,comparison_count,output);
 		}
-		else {
-			return search(root->right,value,comparison_count);
-		}
+	else {
+		return search(root->right,value,comparison_count,output);
 	}
+
 }
+
 
 
 /* insert a node with equal key value into a linked list within tree */

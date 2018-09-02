@@ -13,5 +13,5 @@
 #define BUFFER_SIZE 512
 
 void read_csv_into_olympian_struct(olympian_t *target,char* temp_string);
-void print_olympian(olympian_t *target);
+void print_olympian(olympian_t *target, FILE* output);
 olympian_t* create__entry(char* data_string);
