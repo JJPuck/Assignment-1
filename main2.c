@@ -18,16 +18,16 @@ int main(int argc, char const *argv[]) {
 
 	while(fgets(temp_string,BUFFER_SIZE,csv_file) != NULL){
 		temp_olymp = create__entry(temp_string);
-		tree = bst_insert(tree,temp_olymp);
+		tree = insert_equal_key(tree,temp_olymp);
 	}
 	fclose(csv_file);
 
-	while(fgets(temp_string,BUFFER_SIZE,stdin) != NULL)
+	/*while(fgets(temp_string,BUFFER_SIZE,stdin) != NULL)
 	{
 		temp_string[strlen(temp_string)-1] = '\0';
 		comparison_count = 0;
 		search(tree,temp_string,&comparison_count,output);
-	}
+	}*/
 
 
 

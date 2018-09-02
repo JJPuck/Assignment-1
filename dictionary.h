@@ -38,6 +38,7 @@ typedef struct olympian olympian_t;
 struct node{
 	struct node* left;
   struct node* right;
+	struct node* next;
 	olympian_t* data;
 	string_t key;
 
@@ -50,7 +51,7 @@ bt_node_t* bst_make_tree();
 /* Insert a new element into the binary search tree */
 bt_node_t* bst_insert(bt_node_t *root, olympian_t* key);
 /* insert a node with equal key value into a linked list within tree */
-bt_node_t* insert_equal_key(bt_node_t *root);
+bt_node_t* insert_equal_key(bt_node_t *root, olympian_t* key);
 /*  traverse through the binary search tree*/
 bt_node_t* traverse(bt_node_t *root);
 /* Search the tree for a given key and count the number of comparisons */
