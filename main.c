@@ -66,5 +66,6 @@ int main(int argc, char const *argv[]) {
 		total_comparisons = total_comparisons + comparison_count;
 	}
 	fclose(output);
+	traverse_and_free(tree);
   return 0;
 }

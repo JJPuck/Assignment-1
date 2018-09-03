@@ -80,6 +80,12 @@ bt_node_t* bst_search(bt_node_t *root, string_t value, int* comparison_count, FI
 }
 
 /*  traverse through the binary bst_search tree and free memory*/
-bt_node_t* traverse_and_free(bt_node_t *root){
-	return NULL;
+void traverse_and_free(bt_node_t *root){
+	if(root == NULL){
+		return;
+	}
+	traverse_and_free(root->left);
+	traverse_and_free(root->right);
+	free(root->data);
+	free(root);
 }

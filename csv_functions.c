@@ -62,6 +62,6 @@ void print_olympian(olympian_t *target, FILE* output){
 	fprintf(output,"City: %s || ",target->city);
 	fprintf(output,"Sport: %s || ",target->sport);
 	fprintf(output,"Event: %s || ",target->event);
-	fprintf(output,"Medal: %s || \n\n",target->medal);
+	fprintf(output,"Medal: %s || \n",target->medal);
 
 }

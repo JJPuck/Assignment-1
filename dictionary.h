@@ -61,6 +61,6 @@ bt_node_t* bst_insert(bt_node_t *root, olympian_t* key);
 /* Search the tree for a given key and count the number of comparisons */
 bt_node_t* bst_search(bt_node_t* root, string_t value,int* comparison_count, FILE* output);
 /*  traverse through the binary search tree and free memory*/
-bt_node_t* traverse_and_free(bt_node_t *root);
+void traverse_and_free(bt_node_t *root);
 
 #endif
