@@ -18,18 +18,18 @@ void read_csv_into_olympian_struct(olympian_t *target, char* temp_string){
 			/* String to read */
 			temp_string,
 			/* Format */
-			"%d,%[^,],%c,%d,%d,%d,%[^,],%[^,],%[^,],%d,%[^,],%[^,],%[^,],%[^,],%[^,]",
+			"%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,]",
 			/* Targets */
-			&target->id,        /* INT */
+			target->id,        /* INT */
 			target->name,      /* STRING */
-			&target->sex,       /* CHAR */
-			&target->age,       /* INT */
-			&target->height,    /* INT */
-			&target->weight,    /* INT */
+			target->sex,       /* CHAR */
+			target->age,       /* INT */
+			target->height,    /* INT */
+			target->weight,    /* INT */
 			target->team_name, /* STRING */
 			target->NOC,       /* STRING */
 			target->games,     /* STRING */
-			&target->year,      /* INT */
+			target->year,      /* INT */
 			target->season,    /* STRING */
 			target->city,      /* STRING */
 			target->sport,     /* STRING */
@@ -40,15 +40,15 @@ void read_csv_into_olympian_struct(olympian_t *target, char* temp_string){
 
 void print_olympian(olympian_t *target, FILE* output){
 	fprintf(output,"%s --> ",target->name);
-	fprintf(output,"ID: %d ",target->id);
-	fprintf(output,"Sex: %c || ",target->sex);
-	fprintf(output,"Age: %d || ",target->age);
-	fprintf(output,"Height: %d || ",target->height);
-	fprintf(output,"Weight: %d || ",target->weight);
+	fprintf(output,"ID: %s ",target->id);
+	fprintf(output,"Sex: %s || ",target->sex);
+	fprintf(output,"Age: %s || ",target->age);
+	fprintf(output,"Height: %s || ",target->height);
+	fprintf(output,"Weight: %s || ",target->weight);
 	fprintf(output,"Team: %s || ",target->team_name);
 	fprintf(output,"NOC: %s || ",target->NOC);
 	fprintf(output,"Games: %s || ",target->games);
-	fprintf(output,"Year: %d || ",target->year);
+	fprintf(output,"Year: %s || ",target->year);
 	fprintf(output,"Season: %s || ",target->season);
 	fprintf(output,"City: %s || ",target->city);
 	fprintf(output,"Sport: %s || ",target->sport);

@@ -16,16 +16,16 @@
 typedef char string_t[MAX_STRING_LENGTH];
 
 struct olympian{
-	int id;
+	string_t id;
   string_t name;
-  char sex;
-  int age;
-  int height;
-  int weight;
+  string_t sex;
+  string_t age;
+  string_t height;
+  string_t weight;
   string_t team_name;
   string_t NOC;
   string_t games;
-  int year;
+  string_t year;
   string_t season;
   string_t city;
   string_t sport;

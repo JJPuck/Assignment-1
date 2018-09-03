@@ -10,7 +10,6 @@ int main(int argc, char const *argv[]) {
 	csv_file = fopen(argv[1],"r");
 	output = fopen(argv[2],"w");
 
-
 	int comparison_count = 0;
 	int total_comparisons = 0;
 	int str_len;
@@ -27,13 +26,9 @@ int main(int argc, char const *argv[]) {
 
 	while(fgets(temp_string,BUFFER_SIZE,stdin) != NULL)
 	{
-		//handles cases for single characters
 		str_len = strlen(temp_string);
-		if(str_len == 3){
-			temp_string[1] = '\0';
-		}
-		else if(str_len != 0){
-			temp_string[str_len-1] = '\0';
+		if(str_len > 1){
+			temp_string[str_len-1] = 0;
 		}
 		comparison_count = 0;
 		bst_search(tree,temp_string,&comparison_count,output);
