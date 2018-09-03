@@ -1,4 +1,5 @@
 #include "csv_functions.h"
+#include "dictionary.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -12,6 +13,7 @@ int main(int argc, char const *argv[]) {
 
 	int comparison_count = 0;
 	int total_comparisons = 0;
+	int str_len;
 	char temp_string[BUFFER_SIZE];
 	bt_node_t* tree = bst_make_tree();
 	olympian_t *temp_olymp;
@@ -25,21 +27,17 @@ int main(int argc, char const *argv[]) {
 
 	while(fgets(temp_string,BUFFER_SIZE,stdin) != NULL)
 	{
-		temp_string[strlen(temp_string)-1] = '\0';
+		//handles cases for single characters
+		str_len = strlen(temp_string);
+		if(str_len == 3){
+			temp_string[1] = '\0';
+		}
+		else if(str_len != 0){
+			temp_string[str_len-1] = '\0';
+		}
 		comparison_count = 0;
-		search(tree,temp_string,&comparison_count,output);
+		bst_search(tree,temp_string,&comparison_count,output);
 		total_comparisons = total_comparisons + comparison_count;
 	}
-
-
-printf("Total Comparisons: %d",total_comparisons);
-
-/* TO DO
-* Write the output format print function
-* write the count function
-* output to a file
-* reimplement stage 2
-* Write report on complextiy
-*/
   return 0;
 }

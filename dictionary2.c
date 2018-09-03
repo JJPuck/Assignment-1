@@ -2,7 +2,7 @@
 * Created by Jordan Puckridge 27/8/2018
 *
 * Header file and function prototypes for implementation of dictionary
-* using binary bst_search tree.
+* using binary search tree.
 *
 */
 #include "dictionary.h"
@@ -14,7 +14,7 @@ bt_node_t* bst_make_tree(){
 	return NULL;
 }
 
-/* Insert a new element into the binary bst_search tree */
+/* insert a node with equal key value into a linked list within tree */
 bt_node_t* bst_insert(bt_node_t *root, olympian_t* key){
 	if (root == NULL){
 		root = malloc(sizeof(bt_node_t));
@@ -24,8 +24,11 @@ bt_node_t* bst_insert(bt_node_t *root, olympian_t* key){
 		root->data = key;
 		return root;
 	}
-
-	else if (strcmp(root->key, key->name) <=0){
+	else if (strcmp(root->key,key->name) == 0){
+		/*Create a linked list pointing to the next node */
+		root->next = bst_insert(root->next, key);
+	}
+	else if (strcmp(root->key, key->name) <0){
 		root->left = bst_insert(root->left, key);
 	}
 	else if (strcmp(root->key, key->name) > 0){
@@ -34,7 +37,7 @@ bt_node_t* bst_insert(bt_node_t *root, olympian_t* key){
 	return root;
 }
 
-/* bst_search the tree for a value, continue searching until leaf node is reached */
+/* Search for a key in bst with linked list for duplicates */
 bt_node_t* bst_search(bt_node_t *root, string_t value, int* comparison_count, FILE* output){
 	if(root == NULL){
 		fprintf(output,"%s --> NOTFOUND\n\n",value);
@@ -45,22 +48,21 @@ bt_node_t* bst_search(bt_node_t *root, string_t value, int* comparison_count, FI
 	if(strcmp(root->key,value) == 0){
 		print_olympian(root->data,output);
 		printf("%s --> %d\n",value,*comparison_count);
-		if(root->left != NULL && strcmp(root->left->key,root->key)==0){
-			return bst_search(root->left,value,comparison_count,output);
+		if(root->next != NULL){
+			return bst_search(root->next,value,comparison_count,output);
 		}
 		else return root;
-
 	}
 	else if(strcmp(root->key, value) < 0){
+
 		return bst_search(root->left,value,comparison_count,output);
 		}
 	else {
+
 		return bst_search(root->right,value,comparison_count,output);
 	}
-
 }
-
-/*  traverse through the binary bst_search tree*/
+/*  traverse through the binary search tree*/
 bt_node_t* traverse(bt_node_t *root){
 	return NULL;
 }
